@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Global setting */
+
+:root {
+  --primary-color: #0f172a;
+  --accent-color: #38bdf8;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Navbar setting */
+header {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 0 0.5em;
+}
+
+ul li a:hover {
+  font-weight: bold;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Hero section setting */
+.hero-section {
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 5px rgba(0.1, 0.1, 0, 0.1);
+}
+
+.hero {
+  height: 80dvh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 14em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.25em;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 3em;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.skill img {
+  width: 70px;
+  height: 100%;
+}
+
+.skill img:hover {
+  scale: 1.2;
+}
+
+.projects-grid {
+  display: grid;
+  grid-auto-columns: 300px;
+  grid-auto-rows: 300px;
+  gap: 1em;
+  justify-content: center;
+  justify-items: center;
+}
+
+.project {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #0f172a;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+}
