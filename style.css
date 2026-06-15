@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -66,7 +70,7 @@ ul li a {
 }
 
 ul li a:hover {
-  font-weight: bold;
+  color: var(--accent-color);
 }
 
 .logo span {
@@ -112,6 +116,10 @@ p {
   flex-direction: column;
 }
 
+.hero .btn {
+  margin-top: 1em;
+}
+
 .btn {
   width: fit-content;
   text-decoration: none;
@@ -119,11 +127,11 @@ p {
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  margin-top: 3em;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 h2 {
@@ -150,28 +158,60 @@ h2 {
 .skill img {
   width: 70px;
   height: 100%;
+  transition: transform 0.3s ease;
 }
 
 .skill img:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .projects-grid {
   display: grid;
-  grid-auto-columns: 300px;
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
   justify-content: center;
   justify-items: center;
 }
 
+.projects-section {
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
 .project {
   height: 100%;
   width: 100%;
-  color: white;
-  background-color: #0f172a;
+  padding: 1.5em;
+  box-shadow: 0 2px 5px rgba(0.1, 0.1, 0.1, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.025);
+}
+
+.project img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+
 }
 
 .projects h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
+}
+
+.projects h3 {
+  margin-top: 1em;
+}
+
+.project .btn {
+  margin-top: 2em;
+}
+
+.project p {
+  margin-top: 0.5em;
+  font-size: 1rem;
 }
