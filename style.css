@@ -82,6 +82,7 @@ ul li a:hover {
 .hero-section {
   background-color: var(--bg-color);
   box-shadow: 0 2px 5px rgba(0.1, 0.1, 0, 0.1);
+  border-radius: 10px;
 }
 
 .hero {
@@ -168,7 +169,7 @@ h2 {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
   justify-items: center;
 }
@@ -176,6 +177,8 @@ h2 {
 .projects-section {
   background-color: var(--bg-color);
   box-shadow: 0 2px 5px rgba(0.1, 0.1, 0.1, 0.1);
+  padding: 3em;
+  border-radius: 10px;
 }
 
 .project {
@@ -189,7 +192,7 @@ h2 {
 }
 
 .project:hover {
-  transform: scale(1.025);
+  transform: scale(1.1);
 }
 
 .project img {
