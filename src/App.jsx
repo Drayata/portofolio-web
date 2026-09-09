@@ -8,6 +8,7 @@ function App() {
       </header>
       <main>
         <Hero />
+        <Skills />
       </main>
     </>
   );
@@ -24,24 +25,68 @@ function App() {
 
 function Hero() {
   return (
-    <section className="flex justify-center items-center h-screen">
-      <div cl>
-        <h1>Hello! I am Drayata!</h1>
+    <section className="flex justify-center items-center h-[90dvh] gap-46 border-b-2 border-black box-border">
+      <div className="w-100">
+        <h1 className="font-bold text-3xl">Hello! I am Drayata!</h1>
         <p>
           Fullstack developer, and digital marketer. I'm ready to make something
           great!
         </p>
-        <Button color="red-800">Contact Me</Button>
-        <Button color="blue-300">See My Work</Button>
+        <div className="flex gap-1 mt-2">
+          <Button1 color="red-800">See My Work</Button1>
+          <Button2 color="blue-300">Contact Me</Button2>
+        </div>
       </div>
-      <img />
-      <div></div>
+
+      <div className="w-80 h-80 box-border">
+        <img
+          src="hero.jpeg"
+          alt="hero-image"
+          className="w-full size-full rounded-full object-cover"
+        />
+      </div>
     </section>
   );
 }
 
-function Button({ children, color }) {
-  return <button className={`p-2 bg-${color} rounded-xl`}>{children}</button>;
+function Skills() {
+  return (
+    <section className="flex justify-center items-center h-dvh gap-46 border-b-2 border-black box-border">
+      <div className="w-100">
+        <h1 className="font-bold text-3xl">Hello! I am Drayata!</h1>
+        <p>
+          Fullstack developer, and digital marketer. I'm ready to make something
+          great!
+        </p>
+        <div className="flex gap-1 mt-2">
+          <Button1 color="red-800">See My Work</Button1>
+          <Button2 color="blue-300">Contact Me</Button2>
+        </div>
+      </div>
+
+      <div className="w-64 h-64 box-border">
+        <img
+          src="hero.jpeg"
+          alt="hero-image"
+          className="w-full size-full rounded-full object-cover"
+        />
+      </div>
+    </section>
+  );
+}
+
+function Button1({ children }) {
+  return (
+    <a className={`p-2 bg-blue-500 cursor-pointer rounded-xl`}>{children}</a>
+  );
+}
+
+function Button2({ children }) {
+  return (
+    <a className={`p-2 border-blue-400 border cursor-pointer rounded-xl`}>
+      {children}
+    </a>
+  );
 }
 
 function Logo() {
@@ -67,7 +112,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b border-gray-200 shadow-sm sticky top-0 z-50">
+    <nav className="border-b border-gray-200 shadow-sm sticky top-0 z-50 h-[10dvh]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
